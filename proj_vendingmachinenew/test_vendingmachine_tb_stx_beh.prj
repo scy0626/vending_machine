@@ -1,0 +1,2 @@
+vhdl isim_temp "test_vendingmachine_mod.vhd"
+vhdl isim_temp "test_vendingmachine_tb.vhd"
