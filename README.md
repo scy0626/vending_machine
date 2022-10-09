@@ -431,7 +431,7 @@ else 입력이 없을 경우
 </details>
     
 <details>
-<summary>State = won50 (50원)</summary>
+<summary>State = won300 (300원)</summary>
 <div markdown="1"> 
 	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
