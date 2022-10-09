@@ -184,25 +184,25 @@ elsif (clk'event and clk = '1') then
 <summary>State = won0 (0원)</summary>
 <div markdown="1">
     
-   ● if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+   if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
     
     반환버튼이 눌러지는 경우 0원이므로 0원을 반환하고 won0 state 로 변경한다.
     
     nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
     
-   ● elsif 커피버튼이 눌러지는 경우
+   elsif 커피버튼이 눌러지는 경우
     
     커피를 사기위한 돈이 모자란 state이므로 out_error 에 1을 넣어 error를 출력한다.
     
     state의 변화가 없으므로 nul += 1 , won0 state를 유지한다.
-    
-    ● elsif 50원이 투입된 경우
+	
+    elsif 50원이 투입된 경우
     
     state의 변화가 있으므로 nul = 0 으로 초기화 한다.
     
     state를 현재 state(won0)에서 50원을 더한 won50 state 로 변경한다.
     
-    ● elsif 100원이 투입된 경우
+    elsif 100원이 투입된 경우
     
     state의 변화가 있으므로 nul = 0 으로 초기화 한다.
     
