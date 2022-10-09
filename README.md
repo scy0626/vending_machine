@@ -39,7 +39,7 @@
 
 **Synthesize-XST**와 **Implement Design**을 할 때 Error 가 뜨지 않았고 tb 파일을 만들어 시뮬레이션을 한 결과 성공적으로 값이 출력되고 이상이 없음을 확인하였다.
 
-![image00002.PNG](%E1%84%82%E1%85%A9%E1%86%AB%E1%84%85%E1%85%B5%E1%84%92%E1%85%AC%E1%84%85%E1%85%A9%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%206ff9f62a96c147329305555197b4b1e2/image00002.png)
+![image00002.PNG](https://user-images.githubusercontent.com/31886913/194742379-dec4f1b4-47d6-4e33-9155-48616b10d785.png)
 
 단, Synthesize할 때 경고발생
 
