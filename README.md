@@ -183,9 +183,8 @@ elsif (clk'event and clk = '1') then
 <details>
 <summary>State = won0 (0원)</summary>
 <div markdown="1">
-- **State = won0 (0원)**
     
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
+	<b> 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우</b>
     
     반환버튼이 눌러지는 경우 0원이므로 0원을 반환하고 won0 state 로 변경한다.
     
