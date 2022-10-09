@@ -180,6 +180,9 @@ elsif (clk'event and clk = '1') then
 - if 문을 이용하여 각각의 입력에 따른 state의 변화를 수정한다.
 
 ---
+<details>
+<summary>State = won0 (0원)</summary>
+<div markdown="1">
 
 - **State = won0 (0원)**
     
@@ -217,6 +220,10 @@ elsif (clk'event and clk = '1') then
     
     state의 변화가 없으므로 nul += 1 , won0 state를 유지한다.
     
+
+</div>
+</details>
+
 - **State = won50 (50원)**
     
     **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
