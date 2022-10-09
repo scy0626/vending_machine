@@ -183,7 +183,6 @@ elsif (clk'event and clk = '1') then
 <details>
 <summary>State = won0 (0원)</summary>
 <div markdown="1">
-
 - **State = won0 (0원)**
     
     **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
@@ -223,40 +222,7 @@ elsif (clk'event and clk = '1') then
 
 </div>
 </details>
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 50원이므로 50원 1개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 모자란 상태이므로 out_error 에 1을 넣어 error를 출력한다.
-    
-    state의 변화가 없으므로 nul += 1 , won50 상태를 유지한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won50)에서 50원을 더한 won100 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won50)에서 100원을 더한 won150 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won50)에서 500원을 더한 won550 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won50 state를 유지한다.
+
     
 - **State = won100 (100원)**
     
