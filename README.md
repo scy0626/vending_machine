@@ -1,8 +1,6 @@
 # 논리회로 설계
 
-**Source Code**
-
-proj_vendingmachinenew/test_vendingmachine_mod.vhd
+**[Source Code](https://github.com/scy0626/vending_machine/blob/da5da4f25b7bd141727419342a90f01b1eae753b/proj_vendingmachinenew/test_vendingmachine_mod.vhd)**
 
 # **Term project report**
 
@@ -13,7 +11,7 @@ proj_vendingmachinenew/test_vendingmachine_mod.vhd
 
 ## **목차**
 
-1. **[기능 및 조건]**
+1. **[기능 및 조건](#1.-기능-및-조건)**
 2. **[설계 결과]**
 3. **[Port 변수설정]**
 4. **[Simulation 결과]**
