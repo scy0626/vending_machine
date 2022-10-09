@@ -2,6 +2,8 @@
 
 **[Source Code](https://github.com/scy0626/vending_machine/blob/da5da4f25b7bd141727419342a90f01b1eae753b/proj_vendingmachinenew/test_vendingmachine_mod.vhd)**
 
+**[Testbench](https://github.com/scy0626/vending_machine/blob/f42e705bafcfb7610ccc5da000ecb06404bd1ca9/proj_vendingmachinenew/test_vendingmachine_tb.vhd)**
+
 # **Term project report**
 
 
