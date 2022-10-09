@@ -182,578 +182,382 @@ elsif (clk'event and clk = '1') then
 ---
 <details>
 <summary>State = won0 (0원)</summary>
-<div markdown="1">
-    
-   if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
-    
-    반환버튼이 눌러지는 경우 0원이므로 0원을 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-   elsif 커피버튼이 눌러지는 경우
-    
-    커피를 사기위한 돈이 모자란 state이므로 out_error 에 1을 넣어 error를 출력한다.
-    
-    state의 변화가 없으므로 nul += 1 , won0 state를 유지한다.
-	
-    elsif 50원이 투입된 경우
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won0)에서 50원을 더한 won50 state 로 변경한다.
-    
-    elsif 100원이 투입된 경우
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won0)에서 100원을 더한 won100 state 로 변경한다.
-    
-    ● elsif 500원이 투입된 경우
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won0)에서 500원을 더한 won500 state 로 변경한다.
-    
-    ● else 입력이 없을 경우
-    
-    state의 변화가 없으므로 nul += 1 , won0 state를 유지한다.
-    
-
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 0원이므로 0원을 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 모자란 state이므로 out_error 에 1을 넣어 error를 출력한다. 
+ state의 변화가 없으므로 nul += 1 , won0 state를 유지한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won0)에서 50원을 더한 won50 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won0)에서 100원을 더한 won100 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won0)에서 500원을 더한 won500 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won0 state를 유지한다.
 </div>
 </details>
+
+<details>
+<summary>State = won50 (50원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 50원이므로 50원 1개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 모자란 상태이므로 out_error 에 1을 넣어 error를 출력한다. 
+ state의 변화가 없으므로 nul += 1 , won50 상태를 유지한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won50)에서 50원을 더한 won100 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won50)에서 100원을 더한 won150 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won50)에서 500원을 더한 won550 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won50 state를 유지한다.
+</div>
+</details>
+
 <details>
 <summary>State = won100 (100원)</summary>
-<div markdown="1">    
-    
-    ● if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
-    
-    반환버튼이 눌러지는 경우 100원이므로 100원 1개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    ● elsif 커피버튼이 눌러지는 경우
-    
-    커피를 사기위한 돈이 모자란 상태이므로 out_error 에 1을 넣어 error를 출력한다.
-    
-    state의 변화가 없으므로 nul += 1 , won100 상태를 유지한다.
-    
-    ● elsif 50원이 투입된 경우
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won100)에서 50원을 더한 won150 state 로 변경한다.
-    
-    ● elsif 100원이 투입된 경우
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won100)에서 100원을 더한 won200 state 로 변경한다.
-    
-    ● elsif 500원이 투입된 경우
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won100)에서 500원을 더한 won600 state 로 변경한다.
-    
-    ● else 입력이 없을 경우
-    
-    state의 변화가 없으므로 nul += 1 , won100 state를 유지한다.
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 100원이므로 100원 1개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 모자란 상태이므로 out_error 에 1을 넣어 error를 출력한다. 
+ state의 변화가 없으므로 nul += 1 , won100 상태를 유지한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won100)에서 50원을 더한 won150 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won100)에서 100원을 더한 won200 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won100)에서 500원을 더한 won600 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won100 state를 유지한다.
 </div>
 </details>
+
 <details>
 <summary>State = won150 (150원)</summary>
-<div markdown="1">     
-    ● if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
-    
-    반환버튼이 눌러지는 경우 150원이므로 50원 1개, 100원 1개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    ● elsif 커피버튼이 눌러지는 경우
-    
-    커피를 사기위한 돈이 모자란 상태이므로 out_error 에 1을 넣어 error를 출력한다.
-    
-    state의 변화가 없으므로 nul += 1 , won150 상태를 유지한다.
-    
-    ● elsif 50원이 투입된 경우
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won150)에서 50원을 더한 won200 state 로 변경한다.
-    
-    ● elsif 100원이 투입된 경우
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won150)에서 100원을 더한 won250 state 로 변경한다.
-    
-    ● elsif 500원이 투입된 경우
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won150)에서 500원을 더한 won650 state 로 변경한다.
-    
-    ● else 입력이 없을 경우
-    
-    state의 변화가 없으므로 nul += 1 , won150 state를 유지한다.
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 150원이므로 50원 1개, 100원 1개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 모자란 상태이므로 out_error 에 1을 넣어 error를 출력한다. 
+ state의 변화가 없으므로 nul += 1 , won150 상태를 유지한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won150)에서 50원을 더한 won200 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won150)에서 100원을 더한 won250 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won150)에서 500원을 더한 won650 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won150 state를 유지한다.
 </div>
-</details>    
-- **State = won200 (200원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 200원이므로 100원 2개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won0 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won200)에서 50원을 더한 won250 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won200)에서 100원을 더한 won300 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won200)에서 500원을 더한 won700 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won200 state를 유지한다.
-    
-- **State = won250 (250원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 250원이므로 50원 1개, 100원 2개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won50 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won250)에서 50원을 더한 won300 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won250)에서 100원을 더한 won350 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won250)에서 500원을 더한 won750 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won250 state를 유지한다.
-    
-- **State = won300 (300원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 300원이므로 100원 3개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won100 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won300)에서 50원을 더한 won350 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won300)에서 100원을 더한 won400 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    500원을 더하면 최댓값 750원이 넘는 800원이 되므로 100원 3개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won300 state를 유지한다.
-    
-- **State = won350 (350원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 350원이므로 50원 1개, 100원 3개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won150 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won350)에서 50원을 더한 won400 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won350)에서 100원을 더한 won450 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    500원을 더하면 최댓값 750원이 넘는 850원이 되므로 50원 1개, 100원 3개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won350 state를 유지한다.
-    
-- **State = won400 (400원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 400원이므로 100원 4개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won200 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won400)에서 50원을 더한 won450 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won400)에서 100원을 더한 won500 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    500원을 더하면 최댓값 750원이 넘는 900원이 되므로 100원 4개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won400 state를 유지한다.
-    
-- **State = won450 (450원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 450원이므로 50원 1개, 100원 4개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won250 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won450)에서 50원을 더한 won500 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won450)에서 100원을 더한 won550 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    500원을 더하면 최댓값 750원이 넘는 950원이 되므로 50원 1개, 100원 4개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won450 state를 유지한다.
-    
-- **State = won500 (500원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 500원이므로 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won300 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won500)에서 50원을 더한 won550 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won500)에서 100원을 더한 won600 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    500원을 더하면 최댓값 750원이 넘는 1000원이 되므로 500원 2개를 반환하고 won0 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won500 state를 유지한다.
-    
-- **State = won550 (550원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 550원이므로 50원 1개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won350 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won550)에서 50원을 더한 won600 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won550)에서 100원을 더한 won650 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    500원을 더하면 최댓값 750원이 넘는 1050원이 되므로 50원 1개, 500원 2개를 반환하고 won0 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won550 state를 유지한다.
-    
-- **State = won600 (600원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 600원이므로 100원 1개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won400 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won600)에서 50원을 더한 won650 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won600)에서 100원을 더한 won700 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    500원을 더하면 최댓값 750원이 넘는 1100원이 되므로 100원 1개, 500원 2개를 반환하고 won0 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won600 state를 유지한다.
-    
-- **State = won650 (650원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 650원이므로 50원 1개, 100원 1개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won450 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won650)에서 50원을 더한 won700 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won650)에서 100원을 더한 won750 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    500원을 더하면 최댓값 750원이 넘는 1150원이 되므로 50원 1개, 100원 1개, 500원 2개를 반환하고 won0 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won650 state를 유지한다.
-    
-- **State = won700 (700원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 700원이므로 100원 2개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won500 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    state를 현재 state(won700)에서 50원을 더한 won750 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    100원을 더하면 최댓값 750원이 넘는 800원이 되므로 100원 3개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    state를 현재 state(won650)에서 100원을 더한 won750 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    500원을 더하면 최댓값 750원이 넘는 1200원이 되므로 100원 2개, 500원 2개를 반환하고 won0 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won700 state를 유지한다.
-    
-- **State = won750 (750원)**
-    
-    **if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우**
-    
-    반환버튼이 눌러지는 경우 750원이므로 50원 1개, 100원 2개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다.
-    
-    **elsif 커피버튼이 눌러지는 경우**
-    
-    커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다.
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    커피 값(200원)을 뺀 won550 state 로 변경한다.
-    
-    **elsif 50원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    50원을 더하면 최댓값 750원이 넘는 800원이 되므로 100원 3개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    **elsif 100원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    100원을 더하면 최댓값 750원이 넘는 850원이 되므로 50원 1개, 100원 3개, 500원 1개를 반환하고 won0 state 로 변경한다.
-    
-    state를 현재 state(won650)에서 100원을 더한 won750 state 로 변경한다.
-    
-    **elsif 500원이 투입된 경우**
-    
-    state의 변화가 있으므로 nul = 0 으로 초기화 한다.
-    
-    500원을 더하면 최댓값 750원이 넘는 1250원이 되므로 50원 1개, 100원 2개, 500원 2개를 반환하고 won0 state 로 변경한다.
-    
-    **else 입력이 없을 경우**
-    
-    state의 변화가 없으므로 nul += 1 , won750 state를 유지한다.
+</details>
+
+<details>
+<summary>State = won200 (200원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 200원이므로 100원 2개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won0 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won200)에서 50원을 더한 won250 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won200)에서 100원을 더한 won300 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won200)에서 500원을 더한 won700 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won200 state를 유지한다.
+</div>
+</details>
+    
+<details>
+<summary>State = won250 (250원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 250원이므로 50원 1개, 100원 2개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won50 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won250)에서 50원을 더한 won300 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won250)에서 100원을 더한 won350 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won250)에서 500원을 더한 won750 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won250 state를 유지한다.
+</div>
+</details>
+    
+<details>
+<summary>State = won50 (50원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 300원이므로 100원 3개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won100 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won300)에서 50원을 더한 won350 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won300)에서 100원을 더한 won400 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 500원을 더하면 최댓값 750원이 넘는 800원이 되므로 100원 3개, 500원 1개를 반환하고 won0 state 로   변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won300 state를 유지한다.
+</div>
+</details>
+
+<details>
+<summary>State = won350 (350원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 350원이므로 50원 1개, 100원 3개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won150 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won350)에서 50원을 더한 won400 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won350)에서 100원을 더한 won450 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 500원을 더하면 최댓값 750원이 넘는 850원이 되므로 50원 1개, 100원 3개, 500원 1개를 반환하고 won0 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won350 state를 유지한다.
+</div>
+</details>
+    
+<details>
+<summary>State = won400 (400원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 400원이므로 100원 4개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won200 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won400)에서 50원을 더한 won450 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won400)에서 100원을 더한 won500 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 500원을 더하면 최댓값 750원이 넘는 900원이 되므로 100원 4개, 500원 1개를 반환하고 won0 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won400 state를 유지한다.
+</div>
+</details>
+    
+<details>
+<summary>State = won450 (450원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 450원이므로 50원 1개, 100원 4개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won250 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won450)에서 50원을 더한 won500 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won450)에서 100원을 더한 won550 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 500원을 더하면 최댓값 750원이 넘는 950원이 되므로 50원 1개, 100원 4개, 500원 1개를 반환하고 won0 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won450 state를 유지한다.
+</div>
+</details>
+    
+<details>
+<summary>State = won500 (500원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 500원이므로 500원 1개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won300 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won500)에서 50원을 더한 won550 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won500)에서 100원을 더한 won600 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 500원을 더하면 최댓값 750원이 넘는 1000원이 되므로 500원 2개를 반환하고 won0 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won500 state를 유지한다.
+</div>
+</details>
+    
+<details>
+<summary>State = won550 (550원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 550원이므로 50원 1개, 500원 1개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won350 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won550)에서 50원을 더한 won600 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won550)에서 100원을 더한 won650 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 500원을 더하면 최댓값 750원이 넘는 1050원이 되므로 50원 1개, 500원 2개를 반환하고 won0 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won550 state를 유지한다.
+</div>
+</details>
+    
+<details>
+<summary>State = won600 (600원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 600원이므로 100원 1개, 500원 1개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won400 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won600)에서 50원을 더한 won650 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won600)에서 100원을 더한 won700 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 500원을 더하면 최댓값 750원이 넘는 1100원이 되므로 100원 1개, 500원 2개를 반환하고 won0 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won600 state를 유지한다.
+</div>
+</details>
+    
+<details>
+<summary>State = won650 (650원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 650원이므로 50원 1개, 100원 1개, 500원 1개를 반환하고 won0 state 로   변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won450 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won650)에서 50원을 더한 won700 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won650)에서 100원을 더한 won750 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 500원을 더하면 최댓값 750원이 넘는 1150원이 되므로 50원 1개, 100원 1개, 500원 2개를 반환하고 won0 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won650 state를 유지한다.
+</div>
+</details>
+    
+<details>
+<summary>State = won700 (700원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 700원이므로 100원 2개, 500원 1개를 반환하고 won0 state 로 변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won500 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ state를 현재 state(won700)에서 50원을 더한 won750 state 로 변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 100원을 더하면 최댓값 750원이 넘는 800원이 되므로 100원 3개, 500원 1개를 반환하고 won0 state 로 변경한다.
+ state를 현재 state(won650)에서 100원을 더한 won750 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 500원을 더하면 최댓값 750원이 넘는 1200원이 되므로 100원 2개, 500원 2개를 반환하고 won0 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won700 state를 유지한다.
+</div>
+</details>
+    
+<details>
+<summary>State = won750 (750원)</summary>
+<div markdown="1"> 
+if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
+ 반환버튼이 눌러지는 경우 750원이므로 50원 1개, 100원 2개, 500원 1개를 반환하고 won0 state 로   변경한다.
+ nul 이 max에 도달한 경우라면 nul을 0 초기화 시킨 후 반환버튼과 같은 동작을 한다. 
+elsif 커피버튼이 눌러지는 경우
+ 커피를 사기위한 돈이 충분한 상태이므로 out_coffee 에 1을 넣어 커피를 출력한다. 
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 커피 값(200원)을 뺀  won550 state 로 변경한다.
+elsif 50원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 50원을 더하면 최댓값 750원이 넘는 800원이 되므로 100원 3개, 500원 1개를 반환하고 won0 state 로   변경한다.
+elsif 100원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 100원을 더하면 최댓값 750원이 넘는 850원이 되므로 50원 1개, 100원 3개, 500원 1개를 반환하고      won0 state 로 변경한다.
+ state를 현재 state(won650)에서 100원을 더한 won750 state 로 변경한다.
+elsif 500원이 투입된 경우
+ state의 변화가 있으므로 nul = 0 으로 초기화 한다.
+ 500원을 더하면 최댓값 750원이 넘는 1250원이 되므로 50원 1개, 100원 2개, 500원 2개를 반환하고     won0 state 로 변경한다.
+else 입력이 없을 경우
+ state의 변화가 없으므로 nul += 1 , won750 state를 유지한다.
+</div>
+</details>
