@@ -1,9 +1,5 @@
 # 논리회로 설계
 
-**[Source Code](https://github.com/scy0626/vending_machine/blob/da5da4f25b7bd141727419342a90f01b1eae753b/proj_vendingmachinenew/test_vendingmachine_mod.vhd)**
-
-**[Testbench](https://github.com/scy0626/vending_machine/blob/f42e705bafcfb7610ccc5da000ecb06404bd1ca9/proj_vendingmachinenew/test_vendingmachine_tb.vhd)**
-
 # **Term project report**
 
 
@@ -14,11 +10,11 @@
 ## **목차**
 
 1. **기능 및 조건**
-2. *[설계 결과)**
+2. **설계 결과)**
 3. **Port 변수설정**
 4. **Simulation 결과**
 5. **세부 프로그램 code**
-
+6. **소스 코드**
 ---
 
 ### 1. **기능 및 조건**
@@ -865,3 +861,9 @@ else 입력이 없을 경우
 	
 </div>
 </details>
+
+### 6. **소스 코드**
+
+**[Source Code](https://github.com/scy0626/vending_machine/blob/da5da4f25b7bd141727419342a90f01b1eae753b/proj_vendingmachinenew/test_vendingmachine_mod.vhd)**
+
+**[Testbench](https://github.com/scy0626/vending_machine/blob/f42e705bafcfb7610ccc5da000ecb06404bd1ca9/proj_vendingmachinenew/test_vendingmachine_tb.vhd)**
