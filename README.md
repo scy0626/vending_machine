@@ -12,9 +12,11 @@
 ## **목차**
 
 1. **[기능 및 조건](https://github.com/scy0626/vending_machine/blob/master/README.md#1-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EC%A1%B0%EA%B1%B4:~:text=%EC%84%B8%EB%B6%80%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20code-,1.%20%EA%B8%B0%EB%8A%A5%20%EB%B0%8F%20%EC%A1%B0%EA%B1%B4,-%E2%91%A0%2050%EC%9B%90%2C%20100)**
-2. **[설계 결과](https://github.com/scy0626/vending_machine/blob/master/README.md#1-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EC%A1%B0%EA%B1%B4:~:text=process.**-,3.%20port%20%EB%B3%80%EC%88%98%20%EC%84%A4%EC%A0%95,-Input)**
-4. **[Simulation 결과](https://github.com/scy0626/vending_machine/blob/master/README.md#1-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EC%A1%B0%EA%B1%B4:~:text=in_coffee-,4.%20Simulation%20%EA%B2%B0%EA%B3%BC,-%EB%B0%98%ED%99%98%EB%B2%84%ED%8A%BC%EA%B3%BC%20reset%EB%B2%84%ED%8A%BC)**
-5. **[세부 프로그램 code](https://github.com/scy0626/vending_machine/blob/master/README.md#1-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EC%A1%B0%EA%B1%B4:~:text=%EC%9B%90%3D250%EC%9B%90-,5.%20%EC%84%B8%EB%B6%80%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20code,-1)%20entity)**
+2. **[설계 결과](https://github.com/scy0626/vending_machine/blob/master/README.md#1-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EC%A1%B0%EA%B1%B4:~:text=%EB%8F%88%EC%9D%84%20%EC%9E%90%EB%8F%99%20%EB%B0%98%ED%99%98-,2.%20%EC%84%A4%EA%B3%84%20%EA%B2%B0%EA%B3%BC,-Synthesize%2DXST%EC%99%80)**
+3. **[Port 변수설정](https://github.com/scy0626/vending_machine/blob/master/README.md#1-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EC%A1%B0%EA%B1%B4:~:text=process.**-,3.%20port%20%EB%B3%80%EC%88%98%20%EC%84%A4%EC%A0%95,-Input0)**
+4. **[Simulation 결과](https://github.com/scy0626/vending_machine/blob/master/README.md#1-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EC%A1%B0%EA%B1%B4:~:text=in_coffee-,4.%20Simulation%20%EA%B2%B0%EA%B3%BC,-%EB%B0%98%ED%99%98%EB%B2%84%ED%8A%BC%EA%B3%BC%20reset%EB%B2%84%ED%8A%BC
+)**
+5. **[세부 프로그램 code](https://github.com/scy0626/vending_machine/blob/master/README.md#1-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EC%A1%B0%EA%B1%B4:~:text=%EC%9B%90%3D250%EC%9B%90)-,5.%20%EC%84%B8%EB%B6%80%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20code,-1)%20entity)**
 
 ---
 
@@ -182,6 +184,7 @@ elsif (clk'event and clk = '1') then
 <details>
 <summary>State = won0 (0원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 0원이므로 0원을 반환하고 won0 state 로 변경한다.
@@ -222,6 +225,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won50 (50원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 50원이므로 50원 1개를 반환하고 won0 state 로 변경한다.
@@ -262,6 +266,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won100 (100원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 100원이므로 100원 1개를 반환하고 won0 state 로 변경한다.
@@ -302,6 +307,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won150 (150원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 150원이므로 50원 1개, 100원 1개를 반환하고 won0 state 로 변경한다.
@@ -342,6 +348,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won200 (200원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 200원이므로 100원 2개를 반환하고 won0 state 로 변경한다.
@@ -384,6 +391,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won250 (250원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 250원이므로 50원 1개, 100원 2개를 반환하고 won0 state 로 변경한다.
@@ -426,6 +434,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won50 (50원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 300원이므로 100원 3개를 반환하고 won0 state 로 변경한다.
@@ -468,6 +477,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won350 (350원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 350원이므로 50원 1개, 100원 3개를 반환하고 won0 state 로 변경한다.
@@ -510,6 +520,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won400 (400원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 400원이므로 100원 4개를 반환하고 won0 state 로 변경한다.
@@ -552,6 +563,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won450 (450원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 450원이므로 50원 1개, 100원 4개를 반환하고 won0 state 로 변경한다.
@@ -594,6 +606,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won500 (500원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 500원이므로 500원 1개를 반환하고 won0 state 로 변경한다.
@@ -636,6 +649,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won550 (550원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 550원이므로 50원 1개, 500원 1개를 반환하고 won0 state 로 변경한다.
@@ -678,6 +692,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won600 (600원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 600원이므로 100원 1개, 500원 1개를 반환하고 won0 state 로 변경한다.
@@ -720,6 +735,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won650 (650원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 650원이므로 50원 1개, 100원 1개, 500원 1개를 반환하고 won0 state 로 변경한다.
@@ -762,6 +778,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won700 (700원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 700원이므로 100원 2개, 500원 1개를 반환하고 won0 state 로 변경한다.
@@ -806,6 +823,7 @@ else 입력이 없을 경우
 <details>
 <summary>State = won750 (750원)</summary>
 <div markdown="1"> 
+	
 if 반환버튼이 눌러지는 경우 or nul 이 20을 도달할 경우
 	
  반환버튼이 눌러지는 경우 750원이므로 50원 1개, 100원 2개, 500원 1개를 반환하고 won0 state 로   변경한다.
