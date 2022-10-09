@@ -1,6 +1,8 @@
 # 논리회로 설계
 
-**학번 : 2016111586 손채영**
+**Source Code**
+
+proj_vendingmachinenew/test_vendingmachine_mod.vhd
 
 # **Term project report**
 
